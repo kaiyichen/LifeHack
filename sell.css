@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+.container{
+    width:90%;
+    padding-left: 70px;
+    padding-top: 10px;
+}
+.field label{
+  
+    font-family: 'Anton', sans-serif;
+}
+input[type=text], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 3px solid #0c3823;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+button[type=submit] {
+    width: 70%;
+    background-color: #0c3823;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #45a049;
+  }
+  

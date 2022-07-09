@@ -18,9 +18,8 @@
     <div class="navbar-right">
       <nav>
         <ul>
-          <li><a href=""><img src="images/sell_logo.png" width= "15px"></a></li>
-          <li><a href=""><img src="images/cart_logo.png" width= "15px"></a></li>
-          <li><a href=""><img src="images/leaderboard_logo.png" width= "15px"></a></li>
+          <li><a href="sell.html"><img src="images/sell_logo.png" width= "15px"></a></li>
+          <li><a href="cart.html"><img src="images/cart_logo.png" width= "15px"></a></li>
         </ul>
       </nav>
     </div>
@@ -95,7 +94,17 @@
 
     <section class="trading">
       <h1>Tradings</h1>
-    </section>
+      <div class="products-list">
+        <div class="products">
+            <!-- render porducts here -->
+        </div>
+    </div>
+
+     <!-- iFrame for cart -->
+     <div class="panel">
+      <iframe src="../cart.html" class="iframe-content"  scrolling="none" width=100%  visibility=0 style="border:0; display:none"></iframe>
+  </div>
+    
 
     <!-- Contact Us -->
     <section class="contactus" id="contactus">
@@ -105,6 +114,9 @@
 
     </section>
 
+    
+    <script src="./products.js"></script>
+    <script src="./app.js"></script>
 
     <!-- JavaScript for navigation bar -->
     <script src=js/nav.js></script>
