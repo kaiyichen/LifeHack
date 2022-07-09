@@ -3,6 +3,7 @@ let products = [
       id: 0,
       name: "Carrot 1 kg",
       price: 4,
+      expiry: "15/7/2022",
       description:
         "Unsold carrot in supermarket",
       imgSrc: "images/carrot.jpg",
@@ -11,6 +12,7 @@ let products = [
         id: 1,
         name: "Apple 0.5 kg",
         price: 5,
+        expiry: "14/7/2022",
         description:
           "Unsold apple in supermarket",
         imgSrc: "images/apple.jpg",
@@ -19,6 +21,7 @@ let products = [
         id: 2,
         name: "Orange 2 kg",
         price: 3,
+        expiry: "15/7/2022",
         description:
           "Unsold orange in supermarket",
         imgSrc: "images/orange.jpg",
@@ -27,6 +30,7 @@ let products = [
         id: 3,
         name: "Cabbage 2 kg",
         price: 5,
+        expiry: "16/7/2022",
         description:
           "Unsold cabbage in supermarket",
         imgSrc: "images/cabbage.jpg",
@@ -35,6 +39,7 @@ let products = [
         id: 4,
         name: "Banana 4 kg",
         price: 9,
+        expiry: "13/7/2022",
         description:
           "Unsold bananas in supermarket",
         imgSrc: "images/banana.jpg",
@@ -43,6 +48,7 @@ let products = [
         id: 5,
         name: "Berries 2 kg",
         price: 5,
+        expiry: "13/7/2022",
         description:
           "Unsold berries in supermarket",
         imgSrc: "images/berries.jpg",
@@ -72,6 +78,7 @@ submitProduct.onclick = () => {
     obj['id'] = id;
     obj['price'] = price;
     obj['imgSrc'] = imgSrc;
+    obj['expiry'] = expiry;
     products.push(obj);
     console.log(products);
 }

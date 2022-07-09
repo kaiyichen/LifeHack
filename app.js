@@ -18,6 +18,9 @@ function renderProdcuts() {
                         <h2>${product.name}</h2>
                         <h2><small>$</small>${product.price}</h2>
                         <p>
+                            expiry date: ${product.expiry}
+                        </p>
+                        <p>
                             ${product.description}
                         </p>
                     </div>
