@@ -15,6 +15,38 @@ let products = [
           "Unsold apple in supermarket",
         imgSrc: "images/apple.jpg",
       },
+      {
+        id: 2,
+        name: "Orange 2 kg",
+        price: 3,
+        description:
+          "Unsold orange in supermarket",
+        imgSrc: "images/orange.jpg",
+      },
+      {
+        id: 3,
+        name: "Cabbage 2 kg",
+        price: 5,
+        description:
+          "Unsold cabbage in supermarket",
+        imgSrc: "images/cabbage.jpg",
+      },
+      {
+        id: 4,
+        name: "Banana 4 kg",
+        price: 9,
+        description:
+          "Unsold bananas in supermarket",
+        imgSrc: "images/banana.jpg",
+      },
+      {
+        id: 5,
+        name: "Berries 2 kg",
+        price: 5,
+        description:
+          "Unsold berries in supermarket",
+        imgSrc: "images/berries.jpg",
+      },
   ];
   
 
@@ -23,7 +55,6 @@ submitProduct.onclick = () => {
     const form = document.getElementById('signup');
     const name = document.getElementById['name'];
     const price = document.getElementById['price'];
-    const description = document.getElementsById['description'];
     const id = this.products.length-1;
     // const imgSrc = form.elements['image'];
 
@@ -40,7 +71,6 @@ submitProduct.onclick = () => {
     obj['name'] = name;
     obj['id'] = id;
     obj['price'] = price;
-    obj['description'] = description;
     obj['imgSrc'] = imgSrc;
     products.push(obj);
     console.log(products);

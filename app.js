@@ -1,5 +1,6 @@
 // SELECT ELEMENTS
 const productsEl = document.querySelector(".products");
+
 const cartItemsEl = document.querySelector(".cart-items");
 const subtotalEl = document.querySelector(".subtotal");
 const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
@@ -74,6 +75,13 @@ function renderSubtotal() {
   totalItemsInCartEl.innerHTML = totalItems;
 }
 
+function purchase() {
+
+  const total = subtotalEl.innerHTML.split(':');
+  const totalcost=total[1];
+  cart = [];
+  alert('Thank you for your purchase,your total is' + totalcost);
+}
 // render cart items
 function renderCartItems() {
   cartItemsEl.innerHTML = ""; // clear cart element
@@ -90,7 +98,7 @@ function renderCartItems() {
             <div class="units">
                 <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
                 <div class="number">${item.numberOfUnits}</div>
-                <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>           
+                <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>
             </div>
         </div>
       `;
