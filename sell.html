@@ -71,7 +71,7 @@
 				</div>
                
 				<div class="field">
-					<button type="submit" id="submitProduct" class="full">Submit</button>
+					<button type="submit" id="submitProduct" class="full" onclick="testing()">Submit</button>
 				</div>
 			</form>
 		</div>
@@ -81,6 +81,12 @@
           <iframe src="../cart.html" class="iframe-content"  scrolling="none" width=100%  visibility=0 style="border:0; display:none"></iframe>
       </div>
   
+      <script>
+        function testing() {
+          window.frames[0].frameElement.contentWindow.update();
+          alert('Added to cart');
+        }
+     </script>
 
 		<script src="products.js"></script>
     <script src="app.js"></script>
