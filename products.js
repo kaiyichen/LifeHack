@@ -78,6 +78,11 @@ let products = [
     const inputImage = fileInput.files[0];
     console.log(inputImage);
   }
+
+
+  function test() {
+    alert('len is' + products.length);
+  }
   
 // submitProduct.onclick = () => {
  
