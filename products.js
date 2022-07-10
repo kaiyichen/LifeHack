@@ -56,79 +56,38 @@ let products = [
   ];
   
 
-submitProduct.onclick = () => {
  
-    const form = document.getElementById('signup');
-    const name = document.getElementById['name'];
-    const price = document.getElementById['price'];
-    const id = this.products.length-1;
-    // const imgSrc = form.elements['image'];
 
-    const imgSrc = document.querySelector("#image-input");
-//     image_input.addEventListener("change", function() {
-//         const reader = new FileReader();
-//         reader.addEventListener("load", () => {
-//         const uploaded_image = reader.result;
-//         document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
-//   });
-//   reader.readAsDataURL(this.files[0]);
-// });
-    const obj={}
-    obj['name'] = name;
-    obj['id'] = id;
-    obj['price'] = price;
-    obj['imgSrc'] = imgSrc;
-    obj['expiry'] = expiry;
+  $( "form" ).submit(function( event ) {
+    // console.log( $( this ).serializeArray() );
+    // event.preventDefault();
+    
+    const id = products.length;
+    const inputName = document.getElementById("name").value;
+    const inputPrice = document.getElementById("price").value;
+    const inputExpiry = document.getElementById("expiry").value;
+    const inputDescription = document.getElementById("description").value;
+    let obj = {id: id, name: inputName, price: inputPrice, expiry: inputExpiry, description: inputDescription};
     products.push(obj);
-    console.log(products);
-}
+    alert(products.length);
+    
+  });
+
+  const fileInput = document.getElementById('image-input');
+  fileInput.onchange = () => {
+    const inputImage = fileInput.files[0];
+    console.log(inputImage);
+  }
+  
+// submitProduct.onclick = () => {
+ 
+    // const form = document.getElementById('signup');
+    // const name = document.getElementById['name'];
+    // const price = document.getElementById['price'];
+    // // const imgSrc = form.elements['image'];
+    // const imgSrc = document.querySelector("#image-input");
 
 
-
-// // An individual product. Holds properties and behavior for one product
-// class Product {
-//     constructor(id,name,price,description,catergory,imgSrc) {
-//         this.name = name;
-//         this.id = id;
-//         this.price = price;
-//         this.description = description;
-//         this.category = catergory;
-//         this.imgSrc = imgSrc;
-//     }
-//   }
-
-
-// // Class that holds a collection of products and properties and functions for the group
-// class Products {
-//     constructor(){
-//     }
-//     // create a new player and save it in the collection
-//     newProduct(name,price,description,category,imgSrc){
-//       const id = this.numberOfProducts-1;
-//       let p = new Product(id,name,price,description,category,imgSrc)
-//       this.products.push(p)
-//       return p
-//     }
-//     get allProducts(){
-//       return this.products
-//     }
-//     // this could include summary stats like average score, etc. For simplicy, just the count for now
-//     get numberOfProducts(){
-//         return this.products.length
-//     }
-//   }
-
-//   let listOfProducts = new Products()
-
-//   submitProduct.onclick = () => {
-//     const form = document.getElementById('signup');
-//     const name = form.elements['name'];
-//     const price = form.elements['price'];
-//     const description = form.elements['description'];
-//     const category = form.elements['category'];
-//     // const imgSrc = form.elements['image'];
-
-//     const image_input = document.querySelector("#image-input");
 //     image_input.addEventListener("change", function() {
 //         const reader = new FileReader();
 //         reader.addEventListener("load", () => {
@@ -138,6 +97,3 @@ submitProduct.onclick = () => {
 //   reader.readAsDataURL(this.files[0]);
 // });
 
-//     listOfProducts.newProduct(name,price,description,category,image_input);
-
-// }
