@@ -37,7 +37,7 @@ renderProdcuts();
 function updateProduct() {
   renderProdcuts();
    // save cart to local storage
-   localStorage.setItem("products", JSON.stringify(productsEl));
+   localStorage.setItem("PRODUCTS", JSON.stringify(products));
 }
 
 // cart array
