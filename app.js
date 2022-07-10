@@ -34,12 +34,6 @@ function renderProdcuts() {
 }
 renderProdcuts();
 
-function updateProduct() {
-  renderProdcuts();
-   // save cart to local storage
-   localStorage.setItem("PRODUCTS", JSON.stringify(products));
-}
-
 // cart array
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();

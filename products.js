@@ -69,7 +69,6 @@ let products = [
     const inputDescription = document.getElementById("description").value;
     let obj = {id: id, name: inputName, price: inputPrice, expiry: inputExpiry, description: inputDescription};
     products.push(obj);
-    alert('you have posted +' + inputName);
     
   });
 
