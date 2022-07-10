@@ -55,7 +55,6 @@ let products = [
       },
   ];
   
-  products = JSON.parse(localStorage.getItem("PRODUCTS"));
 
  
 
@@ -70,7 +69,7 @@ let products = [
     const inputDescription = document.getElementById("description").value;
     let obj = {id: id, name: inputName, price: inputPrice, expiry: inputExpiry, description: inputDescription};
     products.push(obj);
-    alert('you have posted ' + inputName);
+    alert('you have posted +' + inputName);
     
   });
 
@@ -80,3 +79,21 @@ let products = [
     console.log(inputImage);
   }
   
+// submitProduct.onclick = () => {
+ 
+    // const form = document.getElementById('signup');
+    // const name = document.getElementById['name'];
+    // const price = document.getElementById['price'];
+    // // const imgSrc = form.elements['image'];
+    // const imgSrc = document.querySelector("#image-input");
+
+
+//     image_input.addEventListener("change", function() {
+//         const reader = new FileReader();
+//         reader.addEventListener("load", () => {
+//         const uploaded_image = reader.result;
+//         document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
+//   });
+//   reader.readAsDataURL(this.files[0]);
+// });
+
